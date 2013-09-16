@@ -1,0 +1,15 @@
+.settings/
+bin/
+*
+resources/dictionaries/*
+resources/output_books/*
+!.gitignore
+
+
+resources/documentation/class_diagram.ucls
+resources/documentation/report.txt
+
+.class
+.classpath
+.project
+ghostwriter.jar
