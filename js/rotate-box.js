@@ -83,13 +83,18 @@
 		
 		function genVerticalRoll(){
 			
-			$( $self ).mouseenter(function() {
-				animate($(this).children(), wrapTransform($cube.top.animate, -1));				
+			$( $self ).mouseenter(function() {				
+				if(!$(this).children().hasClass('cube_active')){
+					animate($(this).children(), wrapTransform($cube.top.animate, -1));
+				}								
 			});	
-			$( $self ).mouseleave(function() {								
-				animate($(this).children(), wrapTransform($cube.front.animate, -1));				
+			$( $self ).mouseleave(function() {
+				if(!$(this).children().hasClass('cube_active')){
+					animate($(this).children(), wrapTransform($cube.front.animate, -1));
+				}								
 			});
 			
+			animate($($box), wrapTransform($cube.front.animate, -1));
 			animate($('.cube_active'), wrapTransform($cube.top.animate, -1));
 		}
 		
